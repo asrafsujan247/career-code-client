@@ -4,7 +4,7 @@ import Lottie from "lottie-react";
 import { AuthContext } from "../../context/AuthContext";
 
 const Login = () => {
-  const { createUser } = use(AuthContext);
+  const { loginUser } = use(AuthContext);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -12,8 +12,8 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
-    // create user
-    createUser(email, password)
+    // login user
+    loginUser(email, password)
       .then((result) => {
         console.log(result);
       })
