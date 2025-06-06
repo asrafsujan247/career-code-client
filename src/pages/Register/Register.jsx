@@ -1,14 +1,25 @@
 import Lottie from "lottie-react";
-import React from "react";
+import React, { use } from "react";
 import registerAnimation from "../../assets/lotties/register.json";
+import { AuthContext } from "../../context/AuthContext";
 
 const Register = () => {
+  const { createUser } = use(AuthContext);
+
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
+    // create user
+    createUser(email, password)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((err) => {
+        console.log(err);
+      }); 
   };
 
   return (
