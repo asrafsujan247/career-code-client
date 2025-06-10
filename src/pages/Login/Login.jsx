@@ -2,6 +2,7 @@ import React, { use } from "react";
 import loginAnimation from "../../assets/lotties/login.json";
 import Lottie from "lottie-react";
 import { AuthContext } from "../../context/AuthContext";
+import SocialLogin from "../Shared/SocialLogin";
 
 const Login = () => {
   const { loginUser } = use(AuthContext);
@@ -56,6 +57,8 @@ const Login = () => {
                 </button>
               </fieldset>
             </form>
+
+            <SocialLogin></SocialLogin>
           </div>
         </div>
       </div>

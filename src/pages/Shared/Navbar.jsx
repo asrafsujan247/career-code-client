@@ -57,9 +57,12 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {user ? (
-          <button onClick={handleLogout} className="btn">
-            LogOut
-          </button>
+          <>
+            <span>{user?.email}</span>
+            <button onClick={handleLogout} className="btn ml-3">
+              LogOut
+            </button>
+          </>
         ) : (
           <>
             <NavLink className="btn" to="/register">
