@@ -8,10 +8,8 @@ const JobCard = ({ job }) => {
   const {
     title,
     location,
-    jobType,
     description,
     company,
-    category,
     company_logo,
     requirements,
     salaryRange,
@@ -52,7 +50,7 @@ const JobCard = ({ job }) => {
         </div>
         <div className="card-actions justify-end my-4">
           <Link to={`/jobs/${_id}`}>
-            <button className="btn btn-primary">Apply Now</button>s
+            <button className="btn btn-primary">Apply Now</button>
           </Link>
         </div>
       </div>
