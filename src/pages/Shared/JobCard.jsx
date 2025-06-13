@@ -23,7 +23,7 @@ const JobCard = ({ job }) => {
         </figure>
         <div>
           <h2 className="card-title">{company}</h2>
-          <p className="text-gray-200 flex items-center gap-2">
+          <p className="text-gray-200 flex items-center gap-1">
             <IoLocationSharp /> <span>{location}</span>
           </p>
         </div>
@@ -50,7 +50,7 @@ const JobCard = ({ job }) => {
         </div>
         <div className="card-actions justify-end my-4">
           <Link to={`/jobs/${_id}`}>
-            <button className="btn btn-primary">Apply Now</button>
+            <button className="btn btn-primary">Show Details</button>
           </Link>
         </div>
       </div>

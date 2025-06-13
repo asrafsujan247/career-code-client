@@ -103,7 +103,7 @@ const JobDetails = () => {
 
       {/* Apply Now Button */}
       <div className="mt-10 text-center">
-        <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold text-lg shadow-lg transition-all duration-300 hover:scale-105">
+        <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-full font-semibold text-lg shadow-xl transition-all duration-300 hover:scale-105">
           Apply Now
         </button>
       </div>
