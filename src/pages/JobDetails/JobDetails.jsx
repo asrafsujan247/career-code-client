@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData } from "react-router";
+import { Link, useLoaderData } from "react-router";
 import {
   MdLocationOn,
   MdWork,
@@ -25,6 +25,7 @@ const JobDetails = () => {
     hr_email,
     hr_name,
     company_logo,
+    _id,
   } = job;
 
   return (
@@ -103,9 +104,11 @@ const JobDetails = () => {
 
       {/* Apply Now Button */}
       <div className="mt-10 text-center">
-        <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-full font-semibold text-lg shadow-xl transition-all duration-300 hover:scale-105">
-          Apply Now
-        </button>
+        <Link to={`/jobApply/${_id}`}>
+          <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-full font-semibold text-lg shadow-xl transition-all duration-300 hover:scale-105">
+            Apply Now
+          </button>
+        </Link>
       </div>
     </div>
   );
