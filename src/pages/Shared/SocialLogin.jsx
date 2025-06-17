@@ -9,7 +9,7 @@ const SocialLogin = ({ from }) => {
     loginWithGoogle()
       .then((res) => {
         console.log(res);
-        navigate(from, { replace: true });
+        navigate(from || "/", { replace: true });
       })
       .catch((err) => {
         console.log(err);
