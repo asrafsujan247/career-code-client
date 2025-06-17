@@ -1,6 +1,7 @@
 import React, { Suspense } from "react";
 import Banner from "./Banner";
 import HotJobs from "./HotJobs";
+import Loading from "../Shared/Loading";
 
 // Fetching jobs data from the server
 const jobsPromise = fetch("http://localhost:5000/jobs").then((res) =>
@@ -11,11 +12,7 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <Suspense
-        fallback={
-          <div className="text-center text-2xl font-bold">Loading...</div>
-        }
-      >
+      <Suspense fallback={<Loading></Loading>}>
         <HotJobs jobsPromise={jobsPromise}></HotJobs>
       </Suspense>
     </div>

@@ -15,7 +15,7 @@ const PrivateRoute = ({ children }) => {
     return children;
   }
   //  navigate to the login page if the user is not authenticated
-  return <Navigate to="/login" state={{ from: location }} replace />;
+  return <Navigate to="/login" state={location.pathname} replace />;
 };
 
 export default PrivateRoute;
